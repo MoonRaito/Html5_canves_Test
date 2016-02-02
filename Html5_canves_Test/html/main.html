@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+        <!-- 支持手机缩放
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes" />-->
+        <!-- 不支持手机缩放 -->
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+		<title>地图拖动，缩放</title>
+        <link rel="stylesheet" href="css/publicMap.css" type="text/css">
+        <link rel="stylesheet" href="css/loading.css" type="text/css">
+	</head>
+	<body>
+        
+        <div style="position: absolute; z-index: 10; bottom: auto; right: auto; top: 20%; left: 5%;width:62px;height:30px;box-shadow: 1px 1px 2px rgba(0,0,0,.4);background: rgba(255,255,255,.8);border-radius: 3px;">
+            
+            <div style="width:30px;height:30px;border-left: 0px solid #ececec;float: left;display: -webkit-box;
+                -webkit-box-align: center;
+                -webkit-box-pack: center;"  ontouchstart="map01Html();">
+                    1
+            </div>
+            
+            <div style="width:30px;height:30px;border-left: 1px solid #ececec;float: left;display: -webkit-box;
+                -webkit-box-align: center;
+                -webkit-box-pack: center;" ontouchstart="map02Html();">
+                    2
+            </div>
+            
+        </div>
+
+        <div class="map-init" style="position: absolute; z-index: 10;  bottom: 5%; right: auto; top: auto; left: 5%;">
+            <div style="font-size: 11px;">
+                <div class="init-btn" id="initState" ontouchstart="myrefresh();">
+                    <b class="icon-location" style="font-size: 15px;color: #686A5B;">
+                        </b>
+                </div>
+            </div>
+        </div>
+        
+<!--        <div id="zoom-btn-container" style="position: absolute; z-index: 10; bottom: 5%; right: 5%; top: auto; left: auto;" oncilck="zoomIn();">-->
+<!--            <div id="zin-btn" class="zoom-btn zoom-btn-in" ontouchstart="return true;">-->
+<!--                <b class="zin icon-plus" style="font-size: 15px;" >-->
+<!--                    -->
+<!--                </b>-->
+<!--            </div>-->
+<!---->
+<!--            <div id="zout-btn" class="zoom-btn" ontouchstart="return true;">-->
+<!--                <b class="zout icon-minus" style="font-size: 15px;">-->
+<!--                    -->
+<!--                </b>-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+
+
+        
+        <canvas id="canvas"></canvas>
+        <input type="text" id = "ylyTest" value="" style="border:2px solid groove;position:absolute;left:10%;top:5%;opacity:.5;width:80%" />
+
+		<script type="text/javascript" src="main_old.js"></script>
+        
+        <div style="position: absolute; z-index: 10; bottom: 5%; right: 5%; top: auto; left: auto;width:30px;height:60px;box-shadow: 1px 1px 2px rgba(0,0,0,.4);background: rgba(255,255,255,.8);border-radius: 3px;">
+            
+            <div id="zin-btn" class="zoom-btn zoom-btn-in"  ontouchstart="zoomIn();">
+                <b class="zin icon-plus" style="font-size: 15px;" >
+                    
+                </b>
+            </div>
+
+            <div id="zout-btn" class="zoom-btn" ontouchstart="zoomOut();">
+                <b class="zout icon-minus" style="font-size: 15px;">
+                    
+                </b>
+            </div>
+            
+        </div>
+        
+        
+<!--        <div class="spinner">-->
+<!--            <div class="spinner-container container1">-->
+<!--                <div class="circle1"></div>-->
+<!--                <div class="circle2"></div>-->
+<!--                <div class="circle3"></div>-->
+<!--                <div class="circle4"></div>-->
+<!--            </div>-->
+<!--            <div class="spinner-container container2">-->
+<!--                <div class="circle1"></div>-->
+<!--                <div class="circle2"></div>-->
+<!--                <div class="circle3"></div>-->
+<!--                <div class="circle4"></div>-->
+<!--            </div>-->
+<!--            <div class="spinner-container container3">-->
+<!--                <div class="circle1"></div>-->
+<!--                <div class="circle2"></div>-->
+<!--                <div class="circle3"></div>-->
+<!--                <div class="circle4"></div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+   
+        
+        <script type="text/javascript" src="js/paging.js"></script>
+	</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <!-- 支持手机缩放 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes" />-->
+        <!-- 不支持手机缩放 -->
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+        <title>砖块地图寻路</title>
+        <link rel="stylesheet" href="css/publicMap.css" type="text/css">
+        </head>
+    <body>
+        
+        <div style="position: absolute; z-index: 10; bottom: auto; right: auto; top: 20%; left: 5%;width:62px;height:30px;box-shadow: 1px 1px 2px rgba(0,0,0,.4);background: rgba(255,255,255,.8);border-radius: 3px;">
+            
+            <div style="width:30px;height:30px;border-left: 0px solid #ececec;float: left;display: -webkit-box;
+                -webkit-box-align: center;
+                -webkit-box-pack: center;"  ontouchstart="map01Html();">
+                1
+            </div>
+            
+            <div style="width:30px;height:30px;border-left: 1px solid #ececec;float: left;display: -webkit-box;
+                -webkit-box-align: center;
+                -webkit-box-pack: center;" ontouchstart="map02Html();">
+                2
+            </div>
+            
+<!--            <div style="width:30px;height:30px;border-left: 1px solid #ececec;float: left;display: -webkit-box;-->
+<!--                -webkit-box-align: center;-->
+<!--                -webkit-box-pack: center;" ontouchstart="getAddressePath();">-->
+<!--                3-->
+<!--            </div>-->
+
+        </div>
+        
+        <!-- 我的位置 -->
+        <div class="map-init" style="position: absolute; z-index: 10;  bottom: 5%; right: auto; top: auto; left: 5%;">
+            <div style="font-size: 11px;">
+                <div class="init-btn" id="initState" ontouchstart="getLocation();">
+                    <b class="icon-location" style="font-size: 15px;color: #686A5B;">
+                    </b>
+                </div>
+            </div>
+        </div>
+        
+        <canvas id="canvas"></canvas>
+        
+        <div style="position: absolute; z-index: 10; bottom: auto; right: auto; top: 5%; left: 10%;width:70%;height:auto;box-shadow: 0px 0px 10px rgba(0,0,0,.4);background: rgba(255,255,255,.8);border-radius: 3px;">
+            
+<!--            -moz-box-shadow: 0 0 20px #074A99;/*firefox*/-->
+<!--            -webkit-box-shadow: 0 0 20px #074A99;/*safari或chrome*/-->
+<!--            box-shadow: 0 0 10px #074A99;/*opera或ie9*/-->
+
+            <div style="width:80%;height:30px;border-left: 0px solid #ececec;float: left;display: -webkit-box;
+                -webkit-box-align: center;
+                -webkit-box-pack: center;" >
+                <input type="text" id = "txtAdresse" value="" style="opacity: .5;
+                    width: 100%;
+                    border: 0px;
+                    float: left;" placeholder="搜索" />
+            </div>
+            
+            <div style="width:30px;height:30px;border-left: 1px solid #ececec;float: right;display: -webkit-box;
+                -webkit-box-align: center;
+                -webkit-box-pack: center;" ontouchstart="getDestinations();">
+<!--                getDestinations-->
+                Go
+            </div>
+            
+        </div>
+        
+<!--        <div style="position: absolute; z-index: 10; bottom: auto; right: auto; top: 25%; left: 40%;width:50%;height:auto;box-shadow: 0px 0px 10px rgba(0,0,0,.4);background: rgba(255,255,255,.8);border-radius: 3px;">-->
+<!--            <div style="width:100%;height:30px;border-left: 0px solid #ececec;float: left;display: -webkit-box;-->
+<!--                -webkit-box-align: center;-->
+<!--                -webkit-box-pack: center;" >-->
+<!--                <input type="text" id = "ylyTest" value="" style="opacity: .5;-->
+<!--                width: 100%;-->
+<!--                border: 0px;-->
+<!--                float: left;" placeholder="测试" />-->
+<!--            </div>-->
+<!--            -->
+<!--        </div>-->
+
+        
+<!--        <input type="text" id = "ylyTest" value="" style="border:2px solid groove;position:absolute;left:10%;top:5%;opacity:.5;width:80%" />-->
+<!--        <input type="text" id = "ylyTestdingw" value="" style="border:2px solid groove;position:absolute;left:10%;top:25%;opacity:.5;width:80%" />-->
+
+        
+        <div style="position: absolute; z-index: 10; bottom: 5%; right: 5%; top: auto; left: auto;width:30px;height:60px;box-shadow: 1px 1px 2px rgba(0,0,0,.4);background: rgba(255,255,255,.8);border-radius: 3px;">
+            
+            <div id="zin-btn" class="zoom-btn zoom-btn-in"  ontouchstart="zoomIn();">
+                <b class="zin icon-plus" style="font-size: 15px;" >
+                    
+                </b>
+            </div>
+            
+            <div id="zout-btn" class="zoom-btn" ontouchstart="zoomOut();">
+                <b class="zout icon-minus" style="font-size: 15px;">
+                    
+                </b>
+            </div>
+            
+        </div>
+        
+        <script type="text/javascript" src="js/getPath.js"></script>
+        
+        <script type="text/javascript" src="map01.js"></script>
+        <script type="text/javascript" src="js/paging.js"></script>
+        <script type="text/javascript" src="js/currentPosition.js"></script>
+        <script type="text/javascript" src="js/search.js"></script>
+    </body>
+</html>
