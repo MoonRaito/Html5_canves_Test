@@ -52,7 +52,7 @@ function loadImg(){
         imgIsLoaded=true;
         drawImage();
     }
-    img.src="map.png";
+    img.src="resources/image/map.png";
 }
 
 function drawImage(){

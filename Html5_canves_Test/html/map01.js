@@ -109,7 +109,7 @@ var properties =
 // 一些移动设备有缺省的touchmove行为，比如说经典的iOS overscroll效果，当滚动超出了内容的界限时就引发视图反弹。
 // 这种做法在许多多点触控应用中会带来混乱，但要禁用它很容易。
 document.body.addEventListener('touchmove', function(event) {
-                               event.preventDefault();
+    event.preventDefault();
 }, false);
 
 var mapData = new Array();
@@ -341,8 +341,7 @@ function zoomOut(){
 //    H*=zoomScale;
     drawImage();
 }
-//var mapPoi = "../html/image/map_poi.png";
-var mapPoi = "image/map_poi.png";
+var mapPoi = "../html/image/map_poi.png";
 var lstMyPosition = new Array();
 function drawImage(){
     l = 0;
@@ -448,7 +447,7 @@ function isMyPosition(pointX,pointY){
     if(lstMyPosition.length>0&&(lstMyPosition[0].pointX<=pointX&&pointX<=lstMyPosition[0].pointX+35)
        &&(lstMyPosition[0].pointY+H*zoomScale/2<=pointY&&pointY<=lstMyPosition[0].pointY+35+H*zoomScale/2)){
         
-//        alert(lstMyPosition[0].id);
+        alert(lstMyPosition[0].id);
     }
 }
 

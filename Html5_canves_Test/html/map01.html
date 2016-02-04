@@ -2,13 +2,13 @@
 <html>
     <head>
         <meta charset='utf-8'>
-        <!-- 支持手机缩放 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes" />-->
+        <!-- 支持手机缩放
+             <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes" />-->
         <!-- 不支持手机缩放 -->
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-        <title>砖块地图寻路</title>
-        <link rel="stylesheet" href="css/publicMap.css" type="text/css">
-        </head>
+            <title>砖块地图寻路</title>
+            <link rel="stylesheet" href="css/publicMap.css" type="text/css">
+            </head>
     <body>
         
         <div style="position: absolute; z-index: 10; bottom: auto; right: auto; top: 20%; left: 5%;width:92px;height:30px;box-shadow: 1px 1px 2px rgba(0,0,0,.4);background: rgba(255,255,255,.8);border-radius: 3px;">
@@ -24,16 +24,15 @@
                 -webkit-box-pack: center;" ontouchstart="map02Html();">
                 2
             </div>
-            
+
             <div style="width:30px;height:30px;border-left: 1px solid #ececec;float: left;display: -webkit-box;
                 -webkit-box-align: center;
-                -webkit-box-pack: center;" ontouchstart="svg03Html();">
+                -webkit-box-pack: center;" ontouchstart="svg01Html();">
                 3
             </div>
 
         </div>
         
-        <!-- 我的位置 -->
         <div class="map-init" style="position: absolute; z-index: 10;  bottom: 5%; right: auto; top: auto; left: 5%;">
             <div style="font-size: 11px;">
                 <div class="init-btn" id="initState" ontouchstart="getLocation();">
