@@ -31,11 +31,8 @@ function getLocation()
 };
 function showPosition(position)
 {
-        document.getElementById("txtAdresse").value="纬度: " + position.coords.latitude +
-        "*经度: " + position.coords.longitude;
-    
-//    alert("纬度: " + position.coords.latitude +
-//          "*经度: " + position.coords.longitude);
+    alert("纬度: " + position.coords.latitude +
+          "*经度: " + position.coords.longitude);
 //    ylyTestdingw.value="纬度: " + position.coords.latitude +
 //    "*经度: " + position.coords.longitude;
 
